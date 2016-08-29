@@ -22,18 +22,6 @@ cdef extern from "LDPC.h":
 	void printarray(int *a, int n)
 	void squarearray(int *a, int n)
 
-# create the wrapper code, with numpy type annotations
-#def sigmoid(np.ndarray[double, ndim=1, mode="c"] in_array not None,
-#                     np.ndarray[double, ndim=1, mode="c"] out_array not None):
-#    sigmoid_array(<double*> np.PyArray_DATA(in_array),
-#                <double*> np.PyArray_DATA(out_array),
-#                in_array.shape[0])
-
-#def dummywrap(num) :
-#	cdef np.ndarray a=np.zeros((1),dtype=int)
-#	raw_decode_bec(<int*> np.PyArray_DATA(a),<int*> np.PyArray_DATA(a),\
-#	<int*> np.PyArray_DATA(a),<int*> np.PyArray_DATA(a),<int*> np.PyArray_DATA(a),\
-#	num,<int*> np.PyArray_DATA(a),<int*> np.PyArray_DATA(a),<int*> np.PyArray_DATA(a))
 
 class LDPC :
 	def __init__(self,source) :
